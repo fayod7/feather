@@ -63,19 +63,7 @@ function toggleNavbar() {
   // }
   // count(10);
 }
-{
-  //M-7
-  function sum(arr) {
-    let result = 0;
-    for (let i = 0; i < arr.length; i++) {
-      result += arr[i];
-    }
-    return result;
-  }
 
-  const number = [1,2,3,4,5]
-  console.log(sum(number));
-}
 {
   //M-9
   // function biggestNumber(numbers) {
