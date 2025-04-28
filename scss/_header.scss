@@ -1,0 +1,60 @@
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__collection{
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+    &__item{
+        transition: .4s;
+        &:hover{
+            text-decoration: underline;
+            opacity: 70%;
+            cursor: pointer;
+        }
+    }
+    &__menu{
+        display: none;
+        border: none;
+        background: transparent;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .navbar{
+        &__menu{
+            display: block;
+        }
+        &__collection{
+            position: fixed;
+            top: 0;
+            left: -70%;
+            width: 70%;
+            height: 100vh;
+            background: #fff;
+            border-right: 1px solid #ddd;
+            flex-direction: column;
+            padding: 20px;
+            gap: 16px;
+            transition: .3s ease;
+        }
+        &__collection.show{
+            left: 0;
+        }
+        &__item{
+            span{
+                color: #000;
+            }
+        }
+    }
+}
